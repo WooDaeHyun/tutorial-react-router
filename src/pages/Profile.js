@@ -12,8 +12,9 @@ const data = {
 };
 
 const Profile = () => {
-  const params = useParams();
-  const profile = data[params.username];
+  const param = useParams();
+  const profile = data[param.username];
+  console.log(param);
   console.log(profile);
 
   return (
