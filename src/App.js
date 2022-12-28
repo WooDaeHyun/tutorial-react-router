@@ -4,7 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
 import Articles from "./pages/Articles";
 import Article from "./pages/Article";
+import NotFound from "./pages/NotFound";
 import Layout from "./pages/Layout";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/articles" element={<Articles />}>
           <Route path=":id" element={<Article />} />
         </Route>
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
